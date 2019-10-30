@@ -10,23 +10,27 @@ const GifsWrapper = styled.div`
 `;
 
 const GifContainer = styled.div`
+  margin: 2px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  overflow: hidden;
 `;
 const GifImage = styled.img`
   width: 266px;
-  height:200px;
+  height: 200px;
 `;
 
-const GifsList = ({ allGifs }) => {
-  console.log('allGifs', allGifs);
-  return (
-    <GifsWrapper>
-      {allGifs.map(singleGif => (
-        <GifContainer key={singleGif.id}>
-          <GifImage src={singleGif.images.fixed_height_downsampled.url} alt={singleGif.title} />
-        </GifContainer>
-      ))}
-    </GifsWrapper>
-  );
-};
+const GifsList = ({ allGifs }) => (
+  <GifsWrapper>
+    {allGifs.map(singleGif => (
+      <GifContainer key={singleGif.id}>
+        <GifImage
+          src={singleGif.images.fixed_height_downsampled.url}
+          alt={singleGif.title}
+        />
+      </GifContainer>
+    ))}
+  </GifsWrapper>
+);
 
 export default GifsList;

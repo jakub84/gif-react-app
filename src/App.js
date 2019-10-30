@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import GridWrapper from './components/Wrappers/GridWrapper';
 import SearchBar from './components/SearchBar';
-import localGifs from './components/Source/gifs';
 import GifsList from './components/Gifs/index';
 
 const App = () => {
