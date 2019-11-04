@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/gif-react-app/static/css/main.47771816.chunk.css",
+    "main.js": "/gif-react-app/static/js/main.882508bf.chunk.js",
+    "main.js.map": "/gif-react-app/static/js/main.882508bf.chunk.js.map",
+    "runtime-main.js": "/gif-react-app/static/js/runtime-main.c87d208a.js",
+    "runtime-main.js.map": "/gif-react-app/static/js/runtime-main.c87d208a.js.map",
+    "static/js/2.d1a86030.chunk.js": "/gif-react-app/static/js/2.d1a86030.chunk.js",
+    "static/js/2.d1a86030.chunk.js.map": "/gif-react-app/static/js/2.d1a86030.chunk.js.map",
+    "index.html": "/gif-react-app/index.html",
+    "precache-manifest.4f55fa108799b08364fa2f95e6c710e4.js": "/gif-react-app/precache-manifest.4f55fa108799b08364fa2f95e6c710e4.js",
+    "service-worker.js": "/gif-react-app/service-worker.js",
+    "static/css/main.47771816.chunk.css.map": "/gif-react-app/static/css/main.47771816.chunk.css.map",
+    "static/media/index.css": "/gif-react-app/static/media/YeonSung-Regular.0cd19b83.ttf",
+    "static/media/logo.svg": "/gif-react-app/static/media/logo.4e0487c2.svg",
+    "static/media/placeholder.jpg": "/gif-react-app/static/media/placeholder.09b77349.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c87d208a.js",
+    "static/js/2.d1a86030.chunk.js",
+    "static/css/main.47771816.chunk.css",
+    "static/js/main.882508bf.chunk.js"
+  ]
+}
