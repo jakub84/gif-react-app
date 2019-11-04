@@ -8,7 +8,7 @@ const InnerWrapper = styled.div`
   width: 100%;
   height: 100%;
   top: -300px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(204, 153, 51, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,8 +16,35 @@ const InnerWrapper = styled.div`
   padding: 10px;
 `;
 
+const ImagePlaceholder = styled.div`
+  width: calc(100% / 4);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  background-image: ${props => `url(${props.bg})`};
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  @media (max-width: 1250px) {
+    width: calc(100% / 3);
+  }
+  @media (max-width: 800px) {
+    width: 50%;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+`;
+
 const GifWrapper = styled.div`
-  width: calc(100% / 3);
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -25,8 +52,7 @@ const GifWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightgray;
-  background-image: ${props => `url(${props.bgImage || placeholder})`};
+  background-image: ${props => `url(${props.bgImage})`};
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -56,18 +82,20 @@ const SingleGif = ({ singleGif }) => {
         details={details}
         setDetails={setDetails}
       />
-      <GifWrapper
-        bgImage={singleGif.images.downsized_large.url}
-        onClick={() => setDetails(!details)}
-      >
-        <InnerWrapper>
-          {title ? (
-            <GifTitle>
-              {title[0].toUpperCase() + title.slice(1)}
-            </GifTitle>
-          ) : 'No title'}
-        </InnerWrapper>
-      </GifWrapper>
+      <ImagePlaceholder bg={placeholder}>
+        <GifWrapper
+          bgImage={singleGif.images.downsized_large.url}
+          onClick={() => setDetails(!details)}
+        >
+          <InnerWrapper>
+            {title ? (
+              <GifTitle>{title[0].toUpperCase() + title.slice(1)}</GifTitle>
+            ) : (
+              'No title'
+            )}
+          </InnerWrapper>
+        </GifWrapper>
+      </ImagePlaceholder>
     </>
   );
 };

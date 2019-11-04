@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Loader from '../Loader';
 import logo from '../../assets/images/logo.svg';
 
@@ -16,17 +16,60 @@ const SearchInput = styled.input`
     padding: 10px 30px;
     background-color: #fff;
   }
+  @media (max-width: 500px) {
+    padding:10px
+  }
+`;
+
+
+const animateLogo = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+
+  29% {
+    transform: rotate(0deg) scale(1,1);
+  }
+
+  30% {
+    transform: rotate(30deg) scale(1,1);
+  }
+
+  31% {
+    transform: rotate(-10deg) scale(1,1);
+  }
+
+  32% {
+    transform: rotate(0deg) scale(1,1);
+  }
+  59% {
+    transform: rotate(0deg) scale(1,1);
+  }
+
+  60% {
+    transform: scale(1, 1.1);
+  }
+  61% {
+    transform: scale(1, 0.9);
+  }
+  62% {
+    transform: scale(1,1);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 `;
 
 const LogoContainer = styled.div`
-  margin-bottom:50px;
+  margin-bottom:30px;
   width:300px;
+  animation: ${animateLogo} 10s linear infinite;
 `;
 
 const LogoImg = styled.img`
 width:100%;
-max-width: ${props => (props.dark ? '100%' : '150px')};
-filter: ${props => (props.dark ? 'contrast(1.5)' : 'invert(2)')};
+max-width: ${props => (props.dark ? '100%' : '200px')};
 `;
 
 const SubmitButton = styled.input`

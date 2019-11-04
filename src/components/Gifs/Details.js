@@ -28,7 +28,7 @@ const CloseBtn = styled.input`
 `;
 
 const MainWrapper = styled.div`
-  width: 100%;
+  width: 90%;
   max-width: 800px;
   padding: 30px;
   max-height: 600px;
@@ -39,6 +39,10 @@ const MainWrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+
+  @media (max-width: 500px) {
+    padding: 60px 10px 10px 10px
+  }
 `;
 
 const DetailsField = styled.input`
@@ -63,6 +67,10 @@ const Image = styled.img`
   width: auto;
   height: 100%;
   max-height: 300px;
+  @media (max-width: 600px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const Description = styled.p`

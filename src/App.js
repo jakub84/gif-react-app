@@ -3,6 +3,7 @@ import axios from 'axios';
 import GridWrapper from './components/Wrappers/GridWrapper';
 import SearchBar from './components/SearchBar';
 import GifsList from './components/Gifs/index';
+import Notification from './components/Notifications/Notification';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -37,6 +38,7 @@ const App = () => {
       />
 
       {!loading && <GifsList allGifs={data} />}
+      {!loading && data.length === 0 && inputValue.length !== 0 && <Notification text="There is no data" />}
     </GridWrapper>
   );
 };
