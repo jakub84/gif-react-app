@@ -36,7 +36,7 @@ const App = () => {
         handleSubmit={handleSubmit}
       />
 
-      {!loading && inputValue.length === 0 ? <GifsList allGifs={data} /> : 'no data'}
+      {!loading && <GifsList allGifs={data} />}
     </GridWrapper>
   );
 };

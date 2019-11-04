@@ -23,6 +23,7 @@ const LoaderWrapper = styled.div`
 
 const Cicle = styled.span`
   border: 3px dotted gray;
+  color: gray;
   width: 100px;
   height: 100px;
   border-radius: 50%;
