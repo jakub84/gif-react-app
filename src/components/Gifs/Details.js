@@ -81,9 +81,11 @@ const BtnsContainer = styled.div`
   width: 80%;
   padding: 10px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  
 `;
 
 const Details = ({ singleGif, details, setDetails }) => {

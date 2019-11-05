@@ -9,16 +9,18 @@ const BtnLabel = styled.label`
   font-size: 13px;
   cursor: pointer;
   overflow: hidden;
-  padding: 10px 20px;
+  padding: 30px;
   margin: 5px 10px;
-  min-width:100px;
+  min-width:200px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   background-color: ${props => (props.clicked ? 'orange' : '#fff')};
   color: ${props => (props.clicked ? '#fff' : '#000')};
-  :hover {
+
+  @media (max-width: 600px) {
+    margin-bottom: 30px;
   }
 `;
 
