@@ -60,8 +60,8 @@ const Image = styled.img`
   height: 100%;
   max-height: 300px;
   @media (max-width: 600px) {
-    width: 100%;
-    height: auto;
+    max-height: 200px;
+    max-width: 100%;
   }
 `;
 
