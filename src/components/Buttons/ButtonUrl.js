@@ -11,7 +11,7 @@ const BtnLabel = styled.label`
   overflow: hidden;
   padding: 10px 20px;
   margin: 5px 10px;
-  width:100px;
+  min-width:100px;
   display: flex;
   justify-content: center;
   align-items: center;

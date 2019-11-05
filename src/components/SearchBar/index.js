@@ -129,8 +129,8 @@ const SearchBar = ({
         }}
       />
       <SubmitButton type="submit" value="search" disabled={inputValue.length === 0} />
-      {loading && <Loader />}
     </SearchForm>
+    {loading && <Loader />}
   </SearchWrapper>
 );
 
