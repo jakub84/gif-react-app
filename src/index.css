@@ -3,29 +3,17 @@
    License: none (public domain)
 */
 
-
 @font-face {
-    font-family: "oswald";
-    src: url("./assets/fonts/Oswald-Regular.ttf") format("ttf");
-    font-weight: 600;
+    font-family: "lato";
+    src: url("./assets/fonts/Lato-Regular.ttf");
   }
 
   @font-face {
-    font-family: "oswald";
-    src: url("./assets/fonts/Oswald-Medium.ttf") format("ttf");
-    font-weight: 800;
+    font-family: "shadow";
+    src: url("./assets/fonts/ShadowsIntoLight-Regular.ttf");
   }
 
-  @font-face {
-    font-family: "oswald";
-    src: url("./assets/fonts/Oswald-Light.ttf") format("ttf");
-    font-weight: 400;
-  }
 
-  @font-face {
-    font-family: "YeonSung";
-    src: url("./assets/fonts/YeonSung-Regular.ttf") format("ttf");
-  }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -61,13 +49,13 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     line-height: 1;
-    font-family: "oswald";
     font-weight: 100;
 
 }
 body * {
     box-sizing: border-box;
     transition: all 0.3s;
+    font-family: "lato";
 }
 
 ol, ul {

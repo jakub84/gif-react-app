@@ -63,12 +63,13 @@ const GifWrapper = styled.div`
 `;
 
 const GifTitle = styled.h3`
-  border: 2px solid rgba(255, 255, 255, 0.4);
   display: inline-block;
   border-radius: 20px;
   padding: 10px 20px;
-  font-size: 14px;
+  text-transform: uppercase;
   text-align: center;
+  font-size: 16px;
+  font-family:"shadow";
 `;
 
 const SingleGif = ({ singleGif }) => {

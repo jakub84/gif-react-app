@@ -3,8 +3,13 @@ import styled, { keyframes } from 'styled-components';
 import Loader from '../Loader';
 import logo from '../../assets/images/logo.svg';
 
+
+const SearchForm = styled.form`
+display: flex;
+`;
 const SearchInput = styled.input`
-  padding: 10px 20px;
+  padding: 10px 10px;
+  display: inline-block;
   border-top-left-radius:15px;
   border-bottom-left-radius: 15px;
   border: 1px solid lightgray;
@@ -17,7 +22,12 @@ const SearchInput = styled.input`
     background-color: #fff;
   }
   @media (max-width: 500px) {
-    padding:10px
+    padding:10px;
+    &:focus {
+    color: ${props => (props.dark ? 'white' : '#000')};
+    padding: 10px;
+    background-color: #fff;
+  }
   }
 `;
 
@@ -111,7 +121,7 @@ const SearchBar = ({
     <LogoContainer>
       <LogoImg dark={fetchedData.length === 0} src={logo} alt="logo" />
     </LogoContainer>
-    <form onSubmit={handleSubmit}>
+    <SearchForm onSubmit={handleSubmit}>
       <SearchInput
         placeholder="search gifs..."
         onChange={(event) => {
@@ -120,7 +130,7 @@ const SearchBar = ({
       />
       <SubmitButton type="submit" value="search" disabled={inputValue.length === 0} />
       {loading && <Loader />}
-    </form>
+    </SearchForm>
   </SearchWrapper>
 );
 

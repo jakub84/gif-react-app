@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import ButtonUrl from '../Buttons/ButtonUrl';
+import SocialMedia from '../Buttons/SocialMedia';
 
 const DetailsBg = styled.div`
   width: 100%;
@@ -35,25 +37,15 @@ const MainWrapper = styled.div`
   background-color: #fff;
   border-radius: 5px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
 
   @media (max-width: 500px) {
-    padding: 60px 10px 10px 10px
+    padding: 60px 10px 10px 10px;
   }
-`;
-
-const DetailsField = styled.input`
-  width: 80%;
-  border: 1px solid lightgrey;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  font-size: 13px;
-  cursor: pointer;
 `;
 
 const ImageContainer = styled.div`
@@ -73,10 +65,11 @@ const Image = styled.img`
   }
 `;
 
-const Description = styled.p`
+const ImageTitle = styled.h3`
   display: inline-block;
   width: 80%;
-  font-size: 14px;
+  font-size: 18px;
+  font-family: "shadow";
   color: black;
   margin: 15px 0 5px 0;
   font-weight: 800;
@@ -84,49 +77,41 @@ const Description = styled.p`
   text-align: center;
 `;
 
-const Details = ({ singleGif, details, setDetails }) => {
-  const { title, url, bitly_url: tinyUrl } = singleGif;
-  const copyUrl = (selectedInput, defaultUrl) => {
-    const element = selectedInput;
-    element.select();
-    document.execCommand('copy');
-    element.value = 'copied!!';
-    element.style.backgroundColor = 'lightgreen';
+const BtnsContainer = styled.div`
+  width: 80%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
 
-    setTimeout(() => {
-      element.value = defaultUrl;
-      element.style.backgroundColor = '#fff';
-    }, 2000);
-  };
+const Details = ({ singleGif, details, setDetails }) => {
+  const { title } = singleGif;
 
   return (
     <>
       {details && (
         <DetailsBg>
-          <MainWrapper onClick={null}>
+          <MainWrapper>
             <CloseBtn
               type="button"
               value="Close"
               onClick={() => setDetails(!details)}
             />
-            <Description>{title.toUpperCase()}</Description>
+            <ImageTitle>{title.toUpperCase()}</ImageTitle>
             <ImageContainer>
               <Image src={singleGif.images.downsized_large.url} alt={title} />
             </ImageContainer>
-            <Description> Url </Description>
-            <DetailsField
-              onChange={null}
-              type="text"
-              defaultValue={url}
-              onClick={event => copyUrl(event.target, url)}
-            />
-            <Description> Tiny url </Description>
-            <DetailsField
-              onChange={null}
-              type="text"
-              defaultValue={tinyUrl}
-              onClick={event => copyUrl(event.target, tinyUrl)}
-            />
+            <BtnsContainer>
+              <ButtonUrl
+                value={singleGif.images.fixed_height_downsampled.url}
+                id="copyUrl"
+              />
+              <SocialMedia
+                urlToShare={singleGif.images.fixed_height_downsampled.url}
+              />
+            </BtnsContainer>
           </MainWrapper>
         </DetailsBg>
       )}
