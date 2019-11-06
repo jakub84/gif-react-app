@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5e39e3d873d2fd6c5594d7248522323b",
+    "revision": "e189d2263b24414b909c1f828c4abf61",
     "url": "/gif-react-app/index.html"
   },
   {
-    "revision": "e808a7a5ea40780a4a24",
+    "revision": "f05b5d71a1539d067a73",
     "url": "/gif-react-app/static/css/main.ba113fed.chunk.css"
   },
   {
-    "revision": "dd427f8a7c8605c2bab4",
-    "url": "/gif-react-app/static/js/2.88ab099f.chunk.js"
+    "revision": "5ca8d5211df0f2676b35",
+    "url": "/gif-react-app/static/js/2.dd2f8936.chunk.js"
   },
   {
-    "revision": "e808a7a5ea40780a4a24",
-    "url": "/gif-react-app/static/js/main.64edf710.chunk.js"
+    "revision": "f05b5d71a1539d067a73",
+    "url": "/gif-react-app/static/js/main.86eaec8e.chunk.js"
   },
   {
     "revision": "3e07e33966f64ad259de",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "47c22e0adf5e3659bb254daabc61392f",
     "url": "/gif-react-app/static/media/ShadowsIntoLight-Regular.47c22e0a.ttf"
+  },
+  {
+    "revision": "abb8a771e188ec9fd23ba3ef323d6f24",
+    "url": "/gif-react-app/static/media/delete.abb8a771.svg"
   },
   {
     "revision": "4e0487c232582955f87fb88fcd6437d8",
