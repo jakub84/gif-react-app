@@ -20,7 +20,7 @@ const App = () => {
     setLoading(true);
     axios
       .get(
-        `https://api.giphy.com/v1/gifs/search?api_key=vPFgAGhW54kZX5TzaZQxDUM0Wd8EbmlH&q=${inputValue}&offset=0&rating=G&lang=en`,
+        `https://api.giphy.com/v1/gifs/search?api_key=vPFgAGhW54kZX5TzaZQxDUM0Wd8EbmlH&q=${inputValue}&limit=20&offset=0&rating=G&lang=en`,
       )
       .then((response) => {
         setLoading(false);
