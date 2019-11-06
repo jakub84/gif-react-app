@@ -11,16 +11,21 @@ import {
   PinterestIcon,
 
 } from 'react-share';
+import { rotate } from '../Animations';
 
 
 const SocialWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 `;
 
 const IconContainer = styled.div`
   margin: 5px;
   cursor: pointer;
+  :hover {
+    animation: ${rotate} 0.4s linear forwards;
+  }
 `;
 
 const SocialMedia = ({ urlToShare }) => (

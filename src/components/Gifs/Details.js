@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ButtonUrl from '../Buttons/ButtonUrl';
 import SocialMedia from '../Buttons/SocialMedia';
 import CloseIcon from '../../assets/images/delete.svg';
+import { rotate } from '../Animations';
 
 const DetailsBg = styled.div`
   width: 100%;
@@ -26,9 +27,9 @@ const CloseBtn = styled.div`
   outline: none;
   border-bottom-left-radius: 10px;
   background-color: orange;
-  height:40px;
-  width:40px;
-  padding:10px;
+  height: 40px;
+  width: 40px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,14 +37,17 @@ const CloseBtn = styled.div`
 `;
 
 const IconImg = styled.img`
-  width:80%;
+  width: 80%;
   height: auto;
-  
+  :hover {
+    animation: ${rotate} 0.4s linear forwards;
+  }
 `;
 
 const MainWrapper = styled.div`
+  border: 5px solid orange;
   width: 90%;
-  max-width: 800px;
+  max-width: 500px;
   padding: 30px;
   max-height: 600px;
   background-color: #fff;
@@ -57,33 +61,28 @@ const MainWrapper = styled.div`
   @media (max-width: 500px) {
     padding: 60px 10px 10px 10px;
   }
-
-  @media (max-height: 600px) {
-    width:100%;
-    max-width:100%;
-    min-height: 700px;
-    overflow: auto;
-    overflow-y: scroll;
-    border-radius: 0;
-    padding-top:30px;
-  }
 `;
 
 const ImageContainer = styled.div`
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   width: 100%;
   margin-top: 20px;
   text-align: center;
+  @media (max-height: 600px) {
+    display: none;
+  }
 `;
 
 const Image = styled.img`
   width: auto;
   height: 100%;
+  max-width: 400px;
   max-height: 300px;
   @media (max-width: 600px) {
     max-height: 200px;
     max-width: 100%;
   }
+
 `;
 
 const ImageTitle = styled.h3`
@@ -106,7 +105,6 @@ const BtnsContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
 `;
 
 const Details = ({ singleGif, details, setDetails }) => {
