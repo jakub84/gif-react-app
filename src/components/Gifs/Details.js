@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ButtonUrl from '../Buttons/ButtonUrl';
 import SocialMedia from '../Buttons/SocialMedia';
+import CloseIcon from '../../assets/images/delete.svg';
 
 const DetailsBg = styled.div`
   width: 100%;
@@ -17,16 +18,27 @@ const DetailsBg = styled.div`
   z-index: 999;
 `;
 
-const CloseBtn = styled.input`
+const CloseBtn = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  padding: 10px 20px;
   border: none;
   outline: none;
   border-bottom-left-radius: 10px;
   background-color: orange;
-  font-size: 12px;
+  height:40px;
+  width:40px;
+  padding:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
+
+const IconImg = styled.img`
+  width:80%;
+  height: auto;
+  
 `;
 
 const MainWrapper = styled.div`
@@ -37,7 +49,6 @@ const MainWrapper = styled.div`
   background-color: #fff;
   border-radius: 5px;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -45,6 +56,16 @@ const MainWrapper = styled.div`
 
   @media (max-width: 500px) {
     padding: 60px 10px 10px 10px;
+  }
+
+  @media (max-height: 600px) {
+    width:100%;
+    max-width:100%;
+    min-height: 700px;
+    overflow: auto;
+    overflow-y: scroll;
+    border-radius: 0;
+    padding-top:30px;
   }
 `;
 
@@ -100,7 +121,9 @@ const Details = ({ singleGif, details, setDetails }) => {
               type="button"
               value="Close"
               onClick={() => setDetails(!details)}
-            />
+            >
+              <IconImg src={CloseIcon} alt="close" />
+            </CloseBtn>
             <ImageTitle>{title.toUpperCase()}</ImageTitle>
             <ImageContainer>
               <Image src={singleGif.images.downsized_large.url} alt={title} />
