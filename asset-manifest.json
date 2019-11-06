@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/gif-react-app/static/css/main.ba113fed.chunk.css",
-    "main.js": "/gif-react-app/static/js/main.86eaec8e.chunk.js",
-    "main.js.map": "/gif-react-app/static/js/main.86eaec8e.chunk.js.map",
+    "main.js": "/gif-react-app/static/js/main.863233f4.chunk.js",
+    "main.js.map": "/gif-react-app/static/js/main.863233f4.chunk.js.map",
     "runtime-main.js": "/gif-react-app/static/js/runtime-main.c87d208a.js",
     "runtime-main.js.map": "/gif-react-app/static/js/runtime-main.c87d208a.js.map",
-    "static/js/2.dd2f8936.chunk.js": "/gif-react-app/static/js/2.dd2f8936.chunk.js",
-    "static/js/2.dd2f8936.chunk.js.map": "/gif-react-app/static/js/2.dd2f8936.chunk.js.map",
+    "static/js/2.d4098b01.chunk.js": "/gif-react-app/static/js/2.d4098b01.chunk.js",
+    "static/js/2.d4098b01.chunk.js.map": "/gif-react-app/static/js/2.d4098b01.chunk.js.map",
     "index.html": "/gif-react-app/index.html",
-    "precache-manifest.2e959fa0f99b7484baa0b76da58c1d94.js": "/gif-react-app/precache-manifest.2e959fa0f99b7484baa0b76da58c1d94.js",
+    "precache-manifest.9afec913f02f9c98118e064e96a88b62.js": "/gif-react-app/precache-manifest.9afec913f02f9c98118e064e96a88b62.js",
     "service-worker.js": "/gif-react-app/service-worker.js",
     "static/css/main.ba113fed.chunk.css.map": "/gif-react-app/static/css/main.ba113fed.chunk.css.map",
     "static/media/index.css": "/gif-react-app/static/media/ShadowsIntoLight-Regular.47c22e0a.ttf",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c87d208a.js",
-    "static/js/2.dd2f8936.chunk.js",
+    "static/js/2.d4098b01.chunk.js",
     "static/css/main.ba113fed.chunk.css",
-    "static/js/main.86eaec8e.chunk.js"
+    "static/js/main.863233f4.chunk.js"
   ]
 }
